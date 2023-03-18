@@ -22,10 +22,10 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function home()
+    public function admin()
     {
-        $contacts = Contact::simplePaginate(4);
-        return view('home', ['contacts' => $contacts]);
+        $contacts = Contact::simplePaginate(10);
+        return view('admin', ['contacts' => $contacts]);
         //return view('home');
     }
 }

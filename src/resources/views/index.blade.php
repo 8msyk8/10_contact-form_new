@@ -20,12 +20,14 @@
         @csrf
         <div class="form__group">
             <div class="form__group-title">
-                <span class="form__label--item">お名前※</span>
+                <span class="form__label--item">お名前</span>
+                <span class="form__label--required">※</span>
             </div>
             <div class="form__group-content">
                 <div class="form__input--text">
-                    <input type="text" name="fullname" placeholder="テスト太郎" />
+                    <input type="text" name="fullname" />
                 </div>
+                <span class="form__label--item-sample">例)山田</span>
                 <div class="form__error">
                     @error('fullname')
                     {{ $message }}
@@ -35,7 +37,8 @@
         </div>
         <div class="form__group">
             <div class="form__group-title">
-                <span class="form__label--item">性別※</span>
+                <span class="form__label--item">性別</span>
+                <span class="form__label--required">※</span>
             </div>
             <div class="form__group-content">
             <dd>
@@ -46,7 +49,7 @@
             <label for="male">女性</label>
         </dd>
                 <div class="form__error">
-                    <!--バリデーション機能を実装したら記述します。-->
+                    <!--set validation-->
                     
                 </div>
             </div>
@@ -54,14 +57,15 @@
 
 <div class="form__group">
 <div class="form__group-title">
-<span class="form__label--item">メールアドレス※</span>
+<span class="form__label--item">メールアドレス</span>
+<span class="form__label--required">※</span>
 </div>
 <div class="form__group-content">
 <div class="form__input--text">
-<input type="email" name="email" placeholder="test@example.com" />
+<input type="email" name="email"/>
 </div>
 <div class="form__error">
-<!--バリデーション機能を実装したら記述します。-->
+<!--set validation-->
 @error('email')
                     {{ $message }}
                     @enderror
@@ -75,10 +79,10 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--text">
-                    <input type="text" name="postcode" placeholder="テスト太郎" />
+                    <input type="text" name="postcode"/>
                 </div>
                 <div class="form__error">
-                    <!--バリデーション機能を実装したら記述します。-->
+                    <!--set validation-->
                     @error('postcode')
                     {{ $message }}
                     @enderror
@@ -92,10 +96,10 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--text">
-                    <input type="text" name="address" placeholder="テスト太郎" />
+                    <input type="text" name="address"/>
                 </div>
                 <div class="form__error">
-                    <!--バリデーション機能を実装したら記述します。-->
+                    <!--set validation-->
                     @error('address')
                     {{ $message }}
                     @enderror
@@ -109,10 +113,10 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--text">
-                    <input type="text" name="building_name" placeholder="テスト太郎" />
+                    <input type="text" name="building_name"/>
                 </div>
                 <div class="form__error">
-                    <!--バリデーション機能を実装したら記述します。-->
+                    <!--set validation-->
                     @error('building_name')
                     {{ $message }}
                     @enderror
@@ -122,13 +126,14 @@
 <div class="form__group">
     <div class="form__group-title">
         <span class="form__label--item">ご意見</span>
+        <span class="form__label--required">※</span>
     </div>
     <div class="form__group-content">
         <div class="form__input--textarea">
-            <textarea name="opinion" placeholder="資料をいただきたいです"></textarea>
+            <textarea name="opinion" ></textarea>
         </div>
         <div class="form__error">
-                    <!--バリデーション機能を実装したら記述します。-->
+                    <!--set validation-->
                     @error('opinion')
                     {{ $message }}
                     @enderror
