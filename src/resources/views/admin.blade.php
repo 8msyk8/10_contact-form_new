@@ -26,7 +26,7 @@
     </div>
 </div>
 
-<form class="search-form" action="/todos/search" method="get">
+<form class="search-form" action="/contacts/search" method="get">
   @csrf
 <div class="search-form__item">
          <input class="search-form__item-input" type="text" name="keyword" value="{{ old('keyword') }}">

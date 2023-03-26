@@ -1,5 +1,3 @@
-<?php print_r($contact) ?>
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -30,10 +28,18 @@
 <tr class="confirm-table__row">
 <th class="confirm-table__header">性別</th>
 <td class="confirm-table__text">
- @if($gender='1')
- <input type="postcode" name="gender" value="男性" readonly />
+
+ <?php
+
+// 変数にprintを付けて値を格納すると 1 が付く
+print $gender; // 田中1
+?>
+ @if($gender==1)
+ <input type="text" name="gender_text" value="男性" readonly />
+ <input type="hidden" name="gender" value="1" />
  @else
-<input type="postcode" name="gender" value="女性" readonly />
+<input type="gender" name="gender" value="女性" readonly />
+ <input type="hidden" name="gender" value="2" />
 @endif
 </td>
 </tr>

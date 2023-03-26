@@ -39,4 +39,13 @@ class ContactController extends Controller
 
         return redirect('/admin')->with('message', 'カテゴリを削除しました');
     }
+
+    public function search(Request $request)
+    {
+        $contacts = Todo::with('fullname')->CategorySearch($request->fullname)->KeywordSearch($request->keyword)->get();
+        $contacts = Contact::all();
+
+        return view('index', compact('contacts', 'fullname'));
+    }
+
 }
