@@ -37,6 +37,6 @@ class ContactController extends Controller
     {
         Contact::find($request->id)->delete();
 
-        return redirect('/home')->with('message', 'カテゴリを削除しました');
+        return redirect('/admin')->with('message', 'カテゴリを削除しました');
     }
 }

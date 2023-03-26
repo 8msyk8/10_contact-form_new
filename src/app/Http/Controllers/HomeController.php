@@ -24,8 +24,7 @@ class HomeController extends Controller
      */
     public function admin()
     {
-        $contacts = Contact::simplePaginate(10);
+        $contacts = Contact::Paginate(10);
         return view('admin', ['contacts' => $contacts]);
-        //return view('home');
     }
 }

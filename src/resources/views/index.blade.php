@@ -23,16 +23,30 @@
                 <span class="form__label--item">お名前</span>
                 <span class="form__label--required">※</span>
             </div>
-            <div class="form__group-content">
+            <div class="form__group-content-name">
+                <div class="form__group-first-name">
                 <div class="form__input--text">
                     <input type="text" name="fullname" />
                 </div>
-                <span class="form__label--item-sample">例)山田</span>
+                <span class="form__label--item-sample">例) 山田</span>
                 <div class="form__error">
                     @error('fullname')
                     {{ $message }}
                     @enderror
                 </div>
+                </div>
+            <div class="form__group-last-name">
+                <div class="form__input--text">
+                    <input type="text" name="last_name" />
+                </div>
+                <span class="form__label--item-sample">例) 太郎</span>
+                <div class="form__error">
+                    @error('last_name')
+                    {{ $message }}
+                    @enderror
+                </div>
+            
+            </div>
             </div>
         </div>
         <div class="form__group">
@@ -42,15 +56,13 @@
             </div>
             <div class="form__group-content">
             <dd>
-            <input type="radio" name="gender" id="male" value='0' {{ old('like','male') == 'male' ? 'checked' : '' }}>
+            <input type="radio" name="gender" id="male" value='1' {{ old('like','male') == 'male' ? 'checked' : '' }}>
             <label for="male">男性</label>
-        
-            <input type="radio" name="gender" id="female" value='1'>
+            <input type="radio" name="gender" id="female" value='2'>
             <label for="male">女性</label>
         </dd>
                 <div class="form__error">
                     <!--set validation-->
-                    
                 </div>
             </div>
         </div>
@@ -79,7 +91,7 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--text">
-                    <input type="text" name="postcode"/>
+                    <input id="postcode" type="text" name="postcode"/>
                 </div>
                 <div class="form__error">
                     <!--set validation-->
@@ -96,7 +108,7 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--text">
-                    <input type="text" name="address"/>
+                    <input id="address" type="text" name="address"/>
                 </div>
                 <div class="form__error">
                     <!--set validation-->
@@ -146,5 +158,31 @@
 </form>
 </div>
 </main>
+<button class="api-address" type="button">住所を自動入力</button>
 </body>
+<script>
+    //イベントリスナの設置：ボタンをクリックしたら反応する
+    document.querySelector('.api-address').addEventListener('click', () => {
+        //郵便番号を入力するテキストフィールドから値を取得
+        const elem = document.querySelector('#postcode');
+        const zip = elem.value;
+        //fetchでAPIからJSON文字列を取得する
+        fetch('../api/address/' + zip)
+            .then((data) => data.json())
+            .then((obj) => {
+                //郵便番号が存在しない場合，空のオブジェクトが返ってくる
+                //オブジェクトが空かどうかを判定
+                if (!Object.keys(obj).length) {
+                    //オブジェクトが空の場合
+                    txt = '住所が存在しません。'
+                } else {
+                    //オブジェクトが存在する場合
+                    //住所は分割されたデータとして返ってくるので連結する
+                    txt = obj.pref + obj.city + obj.town;
+                }
+                //住所を入力するテキストフィールドに文字列を書き込む
+                document.querySelector('#address').value = txt;
+            });
+    });
+</script>
 </html>

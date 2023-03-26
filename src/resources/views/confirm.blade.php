@@ -29,8 +29,12 @@
 </tr>
 <tr class="confirm-table__row">
 <th class="confirm-table__header">性別</th>
-<input type="postcode" name="gender" value="{{ $contact['gender'] }}" readonly />
 <td class="confirm-table__text">
+ @if($gender='1')
+ <input type="postcode" name="gender" value="男性" readonly />
+ @else
+<input type="postcode" name="gender" value="女性" readonly />
+@endif
 </td>
 </tr>
 <tr class="confirm-table__row">
@@ -70,9 +74,9 @@
 </div>
 </form>
 <form class="form" action="/contacts/edit" method="post">
-    @csrf
+@csrf
 <input type="text" name="fullname" type="hidden" value="{{ $contact['fullname'] }}" readonly />
-<input type="postcode" name="gender" type="hidden" value="{{ $contact['gender'] }}" readonly />
+<input type="gender" name="gender" type="hidden" value="{{ $contact['gender'] }}" readonly />
 <input type="email" name="email" type="hidden" value="{{ $contact['email'] }}" readonly />
 <input type="postcode" name="postcode" type="hidden" value="{{ $contact['postcode'] }}" readonly />
 <input type="address" name="address" type="hidden" value="{{ $contact['address'] }}" readonly />

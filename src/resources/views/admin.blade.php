@@ -46,10 +46,10 @@ background-color: #EEEEEE;
 text-align: center;
 }
 
-.text:hover+.opinion {
-    display: block;
+svg.w-5.h-5 {  /*paginateメソッドの矢印の大きさ調整のために追加*/
+width: 30px;
+height: 30px;
 }
-
 </style>
 @section('title', 'index.blade.php')
 
