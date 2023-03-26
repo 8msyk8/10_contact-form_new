@@ -29,12 +29,7 @@
 <th class="confirm-table__header">性別</th>
 <td class="confirm-table__text">
 
- <?php
-
-// 変数にprintを付けて値を格納すると 1 が付く
-print $gender; // 田中1
-?>
- @if($gender==1)
+ @if($contact['gender'] ==1)
  <input type="text" name="gender_text" value="男性" readonly />
  <input type="hidden" name="gender" value="1" />
  @else

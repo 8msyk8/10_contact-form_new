@@ -4,6 +4,7 @@
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
 <title>Contact Form</title>
 <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
 <link rel="stylesheet" href="{{ asset('css/index.css') }}" />
@@ -91,7 +92,8 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--text">
-                    <input id="postcode" type="text" name="postcode"/>
+                    <!-- ▼郵便番号入力フィールド(7桁) -->
+<input type="text" name="postcode" size="10" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,'','address','address');">
                 </div>
                 <div class="form__error">
                     <!--set validation-->
@@ -158,31 +160,5 @@
 </form>
 </div>
 </main>
-<button class="api-address" type="button">住所を自動入力</button>
 </body>
-<script>
-    //イベントリスナの設置：ボタンをクリックしたら反応する
-    document.querySelector('.api-address').addEventListener('click', () => {
-        //郵便番号を入力するテキストフィールドから値を取得
-        const elem = document.querySelector('#postcode');
-        const zip = elem.value;
-        //fetchでAPIからJSON文字列を取得する
-        fetch('../api/address/' + zip)
-            .then((data) => data.json())
-            .then((obj) => {
-                //郵便番号が存在しない場合，空のオブジェクトが返ってくる
-                //オブジェクトが空かどうかを判定
-                if (!Object.keys(obj).length) {
-                    //オブジェクトが空の場合
-                    txt = '住所が存在しません。'
-                } else {
-                    //オブジェクトが存在する場合
-                    //住所は分割されたデータとして返ってくるので連結する
-                    txt = obj.pref + obj.city + obj.town;
-                }
-                //住所を入力するテキストフィールドに文字列を書き込む
-                document.querySelector('#address').value = txt;
-            });
-    });
-</script>
 </html>
