@@ -73,19 +73,7 @@
 <button class="form__button-submit" type="submit">送信</button>
 </div>
 </form>
-<form class="form" action="/contacts/edit" method="post">
-@csrf
-<input type="text" name="fullname" type="hidden" value="{{ $contact['fullname'] }}" readonly />
-<input type="gender" name="gender" type="hidden" value="{{ $contact['gender'] }}" readonly />
-<input type="email" name="email" type="hidden" value="{{ $contact['email'] }}" readonly />
-<input type="postcode" name="postcode" type="hidden" value="{{ $contact['postcode'] }}" readonly />
-<input type="address" name="address" type="hidden" value="{{ $contact['address'] }}" readonly />
-<input type="building_name" name="building_name" type="hidden" value="{{ $contact['building_name'] }}" readonly />
-<input type="text" name="opinion" type="hidden" value="{{ $contact['opinion'] }}" readonly />
-<div class="form__button">
-<button class="link-style-btn" type="submit">修正する</button>
-</div>
-</form>
+<button id="btn--back" class="rounded-md bg-gray-800 text-white px-4 py-2">戻る</button> <script> const back = document.getElementById('btn--back'); back.addEventListener('click', (e) => { history.back(); return false; }); </script>
 </div>
 </main>
 </body>

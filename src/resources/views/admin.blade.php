@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
 <h2>管理システム</h2>
+      <meta charset="utf-8">
+      <meta name="viewprt" content="width=device-width, initial-scale=1.0">
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+         
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -54,7 +59,7 @@ height: 30px;
 @section('title', 'index.blade.php')
 
 @section('content')
-
+{{ $contacts->links() }}
 <table>
 <tr>
 <th>ID</th>
@@ -93,5 +98,5 @@ height: 30px;
 </tr>
 @endforeach
 </table>
-{{ $contacts->links() }}
+
 @endsection
