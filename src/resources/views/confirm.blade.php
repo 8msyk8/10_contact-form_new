@@ -22,7 +22,7 @@
 <tr class="confirm-table__row">
 <th class="confirm-table__header">お名前</th>
 <td class="confirm-table__text">
-<input type="text" name="fullname" value="{{ $contact['fullname'] }}" readonly />
+<input type="text" name="fullname" value="{{ $contact['last_name'].$contact['first_name'] }}" readonly />
 </td>
 </tr>
 <tr class="confirm-table__row">
@@ -74,20 +74,10 @@
 <button class="form__button-submit" type="submit">送信</button>
 </div>
 </form>
-<button id="btn--back" class="rounded-md bg-gray-800 text-white px-4 py-2">戻る</button> <script> const back = document.getElementById('btn--back'); back.addEventListener('click', (e) => { history.back(); return false; }); </script>
+<div class="back__button">
+<button id="back--btn" class="back--btn">修正する</button>
+<script> const back = document.getElementById('back--btn'); back.addEventListener('click', (e) => { history.back(); return false; }); </script>
 </div>
 </main>
 </body>
 </html>
-<style>
-button.link-style-btn{
-  cursor: pointer;
-  border: none;
-  background: none;
-  color: #0033cc;
-}
-button.link-style-btn:hover{
-  text-decoration: underline;
-  color: #002080;
-}
-</style>

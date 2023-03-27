@@ -77,7 +77,11 @@ height: 30px;
 {{$contact->fullname}}
 </td>
 <td>
-{{$contact->gender}}
+@if($contact['gender'] ==1)
+男性
+@else
+女性
+@endif
 </td>
 <td >
 {{$contact->email}}

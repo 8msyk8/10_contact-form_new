@@ -15,12 +15,12 @@ class ContactController extends Controller
 
     public function confirm(ContactRequest $request)
     {
-        $contact = $request->only(['fullname', 'gender', 'email', 'postcode', 'address', 'building_name', 'opinion']);
+        $contact = $request->only(['last_name', 'first_name', 'gender', 'email', 'postcode', 'address', 'building_name', 'opinion']);
         return view('confirm', compact('contact'));
 
     }
 
-    public function store(ContactRequest $request)
+    public function store(Request $request)
     {
         $contact = $request->only(['fullname', 'gender', 'email', 'postcode', 'address', 'building_name', 'opinion']);
         Contact::create($contact);
@@ -42,10 +42,10 @@ class ContactController extends Controller
 
     public function search(Request $request)
     {
-        $contacts = Todo::with('fullname')->CategorySearch($request->fullname)->KeywordSearch($request->keyword)->get();
-        $contacts = Contact::all();
+        $contact = Todo::with('fullname')->CategorySearch($request->fullname)->get();
+        $contact = Contact::all();
 
-        return view('index', compact('contacts', 'fullname'));
+        return view('admin', compact('contact', 'fullname'));
     }
 
 }
