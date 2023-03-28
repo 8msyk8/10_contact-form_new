@@ -25,7 +25,7 @@
                 <span class="form__label--required">※</span>
             </div>
             <div class="form__group-content-name">
-                <div class="form__group-first-name">
+                <div class="form__group-last-name">
                 <div class="form__input--text-name">
                     <input type="text" name="last_name" />
                 </div>
@@ -38,7 +38,7 @@
                     @enderror
                           </div>
                 </div>
-            <div class="form__group-last-name">
+            <div class="form__group-first-name">
                 <div class="form__input--text-name">
                     <input type="text" name="first_name" />
                 </div>
@@ -79,6 +79,9 @@
 <div class="form__input--text">
 <input type="email" name="email"/>
 </div>
+                <div class="form__label--item-sample">
+                    <span>例) test@example.com</span>
+                </div>
 <div class="form__error">
 <!--set validation-->
 @error('email')
@@ -87,7 +90,7 @@
 </div>
 </div>
 </div>
-<div class="form__group">
+<div  class="form__group">
             <div class="form__group-title">
                 <span class="form__label--item">郵便番号</span>
                 <span class="form__label--required">※</span>
@@ -95,7 +98,10 @@
             <div class="form__group-content">
                 <div class="form__input--text">
                     <!-- ▼郵便番号入力フィールド(7桁) -->
-<input type="text" name="postcode" size="10" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,'','address','address');">
+                    <span class="postcode__icon">〒</span><input type="text" name="postcode" size="10" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,'','address','address');">
+                </div>
+                <div class="form__label--item-sample">
+                    <span>例) 123-4567</span>
                 </div>
                 <div class="form__error">
                     <!--set validation-->
@@ -114,6 +120,9 @@
                 <div class="form__input--text">
                     <input id="address" type="text" name="address"/>
                 </div>
+                <div class="form__label--item-sample">
+                    <span>例) 東京都渋谷区千駄ヶ谷1-2-3</span>
+                </div>
                 <div class="form__error">
                     <!--set validation-->
                     @error('address')
@@ -130,6 +139,9 @@
             <div class="form__group-content">
                 <div class="form__input--text">
                     <input type="text" name="building_name"/>
+                </div>
+                <div class="form__label--item-sample">
+                    <span>例) 千駄ヶ谷マンション101</span>
                 </div>
                 <div class="form__error">
                     <!--set validation-->

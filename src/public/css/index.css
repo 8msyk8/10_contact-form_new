@@ -82,9 +82,13 @@
     transform: scale(1.5);
     accent-color: black;
 }
+.postcode__icon {
+    margin-right: 10px;
+}
 
 .form__input--textarea textarea {
     height: 200px;
+    resize: none;
 }
 
 .form__input--text-name input {
@@ -98,6 +102,10 @@
 
 .form__group-content-name {
     display: flex;
+}
+
+.form__group-last-name {
+    margin-right: 5%;
 }
 
 .form__button {

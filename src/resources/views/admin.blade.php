@@ -9,10 +9,11 @@
 <body>
 
  <main>
+
+<div class="container">
     <div class="admin__heading">
      <h2>管理システム</h2>
-</div>
-<div class="container">
+    </div>
      <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -71,7 +72,7 @@
 <td >
 {{$contact->email}}
 </td>
-<td class ="opinion">
+<td class ="opinion" title="{{ $contact['opinion'] }}">
 {{ Str::limit($contact->opinion, 15, '...') }}
 </td>
 <td>
