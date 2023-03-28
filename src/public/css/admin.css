@@ -1,0 +1,53 @@
+.admin__heading,
+.container {
+    margin: 0 auto;
+    padding: 30px 15px;
+    text-align: center;
+}
+
+svg.w-5.h-5 {
+    /*paginateメソッドの矢印の大きさ調整のために追加*/
+    width: 30px;
+    height: 30px;
+}
+.pagination {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.admin_table {
+    width: 100%;
+    text-align: center;
+}
+
+.search-form__container {
+    border-width: 3px;
+    border-style: solid;
+    border-color: #000;
+}
+
+.form__button {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.delete-form__button-submit {
+    padding: 10px;
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 3px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+th {
+    padding: 5px 40px;
+    border-bottom: 1px solid #000;
+}
+
+td {
+    padding: 25px 40px;
+    text-align: center;
+}

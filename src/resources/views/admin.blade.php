@@ -1,13 +1,19 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<htm llang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewprt" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/admin.css') }}" />
+</head>
+<body>
 
-<h2>管理システム</h2>
-      <meta charset="utf-8">
-      <meta name="viewprt" content="width=device-width, initial-scale=1.0">
-      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-         
+ <main>
+    <div class="admin__heading">
+     <h2>管理システム</h2>
+</div>
 <div class="container">
-    <div class="row justify-content-center">
+     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Dashboard') }}</div>
@@ -24,8 +30,8 @@
             </div>
         </div>
     </div>
-</div>
 
+<div class="search-form__container">
 <form class="search-form" action="/contacts/search" method="get">
   @csrf
 <div class="search-form__item">
@@ -35,38 +41,17 @@
 <button class="search-form__button-submit" type="submit">検索</button>
 </div>
 </form>
+</div>
 
-<style>
-th {
-background-color: #289ADC;
-color: white;
-padding: 5px 40px;
-}
-tr:nth-child(odd) td{
-background-color: #FFFFFF;
-}
-td {
-padding: 25px 40px;
-background-color: #EEEEEE;
-text-align: center;
-}
-
-svg.w-5.h-5 {  /*paginateメソッドの矢印の大きさ調整のために追加*/
-width: 30px;
-height: 30px;
-}
-</style>
-@section('title', 'index.blade.php')
-
-@section('content')
-{{ $contacts->links() }}
-<table>
+<div class="pagination">{{ $contacts->links() }}</div>
+<table class="admin_table">
 <tr>
 <th>ID</th>
 <th>お名前</th>
 <th>性別</th>
 <th>メールアドレス</th>
 <th>ご意見</th>
+<th></th>
 </tr>
 @foreach ($contacts as $contact)
 <tr>
@@ -102,5 +87,7 @@ height: 30px;
 </tr>
 @endforeach
 </table>
-
-@endsection
+</div>
+</main>
+</body>
+</html>

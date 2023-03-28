@@ -10,12 +10,14 @@
 </head>
 
 <body>
-<main>
+<main class="main">
+<div class="thanks__container">
 <div class="thanks__content">
 <div class="thanks__heading">
 <h2>ご意見いただきありがとうございました。</h2>
-<div class="form__button">
-<button class="form__button-submit" type="submit">トップページへ</button>
+</div>
+<div class="top__button">
+<button class="top__button-submit" type="submit">トップページへ</button>
 </div>
 </div>
 </div>

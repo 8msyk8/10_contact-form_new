@@ -26,20 +26,24 @@
             </div>
             <div class="form__group-content-name">
                 <div class="form__group-first-name">
-                    <div class="form__input--text-name">
-                        <input type="text" name="last_name" />
-                        <span class="form__label--item-sample">例) 山田</span>
-                    </div>
-                    <div class="form__error">
-                        @error('last_name')
-                        {{ $message }}
-                        @enderror
-                    </div>
+                <div class="form__input--text-name">
+                    <input type="text" name="last_name" />
+                </div>
+                <div class="form__label--item-sample">
+                    <span>例) 山田</span>
+                </div>
+                <div class="form__error">
+                    @error('last_name')
+                    {{ $message }}
+                    @enderror
+                          </div>
                 </div>
             <div class="form__group-last-name">
                 <div class="form__input--text-name">
                     <input type="text" name="first_name" />
-                    <span class="form__label--item-sample">例) 太郎</span>
+                </div>
+                <div class="form__label--item-sample">
+                    <span>例) 太郎</span>
                 </div>
                 <div class="form__error">
                     @error('first_name')
@@ -56,12 +60,10 @@
                 <span class="form__label--required">※</span>
             </div>
             <div class="form__group-content">
-            <dd>
-            <input type="radio" class ="gender" name="gender" id="male" value='1' {{ old('like','male') == 'male' ? 'checked' : '' }}>
-            <label for="male">男性</label>
-            <input type="radio" class ="gender" name="gender" id="female" value='2'>
-            <label for="male">女性</label>
-        </dd>
+                <input type="radio" class = "gender" name="gender" id="male" value='1' {{ old('like','male') == 'male' ? 'checked' : '' }}>
+                <label for="male">  男性</label>
+                <input type="radio" class = "gender" name="gender" id="female" value='2'>
+                <label for="male">  女性</label>
                 <div class="form__error">
                     <!--set validation-->
                 </div>
