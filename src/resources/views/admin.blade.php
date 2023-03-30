@@ -14,7 +14,7 @@
     <div class="admin__heading">
      <h2>管理システム</h2>
     </div>
-     <div class="row justify-content-center">
+     <!-- <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Dashboard') }}</div>
@@ -30,17 +30,64 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
 <div class="search-form__container">
 <form class="search-form" action="/contacts/search" method="get">
   @csrf
 <div class="search-form__item">
-         <input class="search-form__item-input" type="text" name="keyword" value="{{ old('keyword') }}">
+       <div class="form__group">
+            <div class="form__group-title">
+                <span class="form__label--item">お名前</span>
+            </div>
+            <div class="form__group-content">
+                <div class="form__group-last">
+                    <div class="form__input--text">
+                        <input class="search-form__item-input" type="text" name="fullname" value="{{ old('fullname') }}">
+                    </div>
+                </div>    
+            </div>
+            <div class="form__group-title">
+                <span class="form__label--item">性別</span>
+            </div>
+            <div class="form__group-content">
+                <input type="radio" class = "gender" name="gender" id="all" value='0'{{ old('like','all') == 'all' ? 'checked' : '' }}>
+                <label for="male">  全て</label>
+                <input type="radio" class = "gender" name="gender" id="male" value='1' >
+                <label for="male">  男性</label>
+                <input type="radio" class = "gender" name="gender" id="female" value='2'>
+                <label for="male">  女性</label>
+            </div>
+        </div>
+        <div class="form__group">
+            <div class="form__group-title">
+                <span class="form__label--item">登録日</span>
+            </div>
+            <div class="form__group-content">
+                <div class="form__group-last">
+                    <div class="form__input--text">
+                        <input class="search-form__item-input" type="text" name="fullname" value="{{ old('fullname') }}">
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <div class="form__group">
+            <div class="form__group-title">
+                <span class="form__label--item">メールアドレス</span>
+            </div>
+            <div class="form__group-content">
+                <div class="form__group-last">
+                    <div class="form__input--text">
+                        <input class="search-form__item-input" type="text" name="email" value="{{ old('email') }}">
+                    </div>
+                </div> 
+            </div> 
+        </div>
 </div>
 <div class="search-form__button">
 <button class="search-form__button-submit" type="submit">検索</button>
 </div>
+<input class="search-form_reset" type="reset" value="リセット">
 </form>
 </div>
 

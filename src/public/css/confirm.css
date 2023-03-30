@@ -30,10 +30,21 @@
 
 .confirm-table__text input {
     width: 100%;
+    height: auto;
     outline: none;
     border: none;
 }
-
+.confirm-table__text--opinion input {
+    width: 100%;
+    height: 500px;
+    outline: none;
+    border: none;
+}
+.opinion {
+    overflow-wrap: break-word;
+    width: 100%;
+    height: 500px;
+}
 .confirm-table__row:last-child .confirm-table__header,
 .confirm-table__row:last-child .confirm-table__text {
     border-bottom-width: 0;
