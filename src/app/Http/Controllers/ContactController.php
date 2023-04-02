@@ -42,10 +42,10 @@ class ContactController extends Controller
 
     public function search(Request $request)
     {
-        $contact = Todo::with('fullname')->CategorySearch($request->fullname)->get();
-        $contact = Contact::all();
+        $fullnames = Contact::FullNameSearch($request->fullname)->get();
+        $contacts = Contact::Paginate(10);
+        return view('admin', compact('fullnames', 'contacts'));
 
-        return view('admin', compact('contact', 'fullname'));
     }
 
 }

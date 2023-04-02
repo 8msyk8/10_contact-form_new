@@ -81,7 +81,7 @@
 
 .form__input--text-name input {
     padding: 10px;
-    width: 300px;
+    width: 100%;
     height: 40px;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -90,10 +90,15 @@
 
 .form__group-content-name {
     display: flex;
+    width: 100%;
 }
 
 .form__group-last-name {
     margin-right: 5%;
+}
+.form__group-first-name,
+.form__group-last-name {
+    width: 100%;
 }
 
 .gender {
@@ -106,7 +111,7 @@
     justify-content: space-between;
 }
 .postcode__icon {
-    margin-right: auto;
+    margin: auto;
     text-align: center;
 }
 

@@ -18,10 +18,10 @@ class Contact extends Model
         'opinion'
     ];
 
-    public function scopeFullnameSearch($query, $fullname)
+    public function scopeFullNameSearch($query, $fullname)
     {
         if (!empty($fullname)) {
-            $query->where('fullname', $fullname);
+            $query->where('fullname', 'like', '%' . $fullname . '%');
         }
     }
 }
