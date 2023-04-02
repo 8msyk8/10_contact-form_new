@@ -54,13 +54,13 @@
             </div>
             </div>
         </div>
-        <div class="form__group">
+        <div class="form__group_gender">
             <div class="form__group-title">
                 <span class="form__label--item">性別</span>
                 <span class="form__label--required">※</span>
             </div>
             <div class="form__group-content">
-                <div class="form__group-gender">
+                <div class="form__group-gender--check">
                 <input type="radio" class = "gender" name="gender" id="male" value='1' {{ old('like','male') == 'male' ? 'checked' : '' }}>
                 <label for="male">  男性</label>
                 <input type="radio" class = "gender" name="gender" id="female" value='2'>

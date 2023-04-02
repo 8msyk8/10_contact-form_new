@@ -56,6 +56,20 @@ svg.w-5.h-5 {
     display: flex;
     justify-content: space-between;
 }
+.current__page {
+    color: white;
+    background-color: #000;
+    border: solid 2px #000;
+    text-decoration: none;
+}
+
+.next__page {
+    color: black;
+    background-color: white;
+    border: solid 2px black;
+    text-decoration: none;
+}
+
 .admin_table {
     width: 100%;
     text-align: center;

@@ -40,10 +40,11 @@
     outline: none;
     border: none;
 }
+
 .opinion {
     overflow-wrap: break-word;
     width: 100%;
-    height: 500px;
+    height: auto;
 }
 .confirm-table__row:last-child .confirm-table__header,
 .confirm-table__row:last-child .confirm-table__text {
