@@ -54,18 +54,19 @@
             </div>
             </div>
         </div>
-        <div class="form__group_gender">
+        <div class="form__group">
             <div class="form__group-title">
                 <span class="form__label--item">性別</span>
                 <span class="form__label--required">※</span>
             </div>
             <div class="form__group-content">
-                <div class="form__group-gender--check">
                 <input type="radio" class = "gender" name="gender" id="male" value='1' {{ old('like','male') == 'male' ? 'checked' : '' }}>
                 <label for="male">  男性</label>
                 <input type="radio" class = "gender" name="gender" id="female" value='2'>
                 <label for="male">  女性</label>
-            </div>                
+                <div class="form__error">
+                    <!--set validation-->
+                </div>
             </div>
         </div>
 
@@ -95,7 +96,7 @@
                 <span class="form__label--required">※</span>
             </div>
             <div class="form__group-content">
-                <div class="form__input--text-address">
+                <div class="form__input--text">
                     <!-- ▼郵便番号入力フィールド(7桁) -->
                     <span class="postcode__icon">〒</span><input type="text" name="postcode" size="10" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,'','address','address');">
                 </div>

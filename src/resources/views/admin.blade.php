@@ -43,7 +43,7 @@
             <div class="form__group-content">
                 <div class="form__group-last">
                     <div class="form__input--text">
-                        <input class="search-form__item-input" type="text" name="fullname" value="{{ old('fullname') }}">
+                        <input class="search-form__item-input" type="text" name="keyword" value="{{ old('keyword') }}">
                     </div>
                 </div>    
             </div>
