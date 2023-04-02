@@ -37,9 +37,22 @@
     justify-content: space-between;
     margin-bottom: 15px;
 }
-
 .form__group-title {
-    width: 30%;
+    width: 200px;
+    display: flex;
+}
+
+.form__label--item {
+    text-align: left;
+    width: 200px;
+    margin-left: 5px;
+    padding: 4px 6px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+.red {
+    color: #ff0000;
+    margin-left: 10px;
 }
 
 .form__label--item-sample {
@@ -48,30 +61,10 @@
     opacity: 0.5;
 }
 
-.form__label--item {
-    margin-left: 5px;
-    padding: 4px 6px;
-    border-radius: 3px;
-    font-weight: bold;
-}
-
-.form__label--required {
-    margin-left: 5px;
-    padding: 4px 6px;
-    border-radius: 3px;
-    color: #ff0000;
-}
-
-.form__error {
-    height: 20px;
-    color: #ff0000;
-    text-align: left;
-}
-
 .form__input--text input,
 .form__input--textarea textarea {
+    width: 100%;
     padding: 10px;
-    width: 500px;
     border: 1px solid #ddd;
     border-radius: 10px;
     appearance: none;
@@ -80,22 +73,10 @@
 .form__input--text input {
     height: 40px;
 }
-
-.gender {
-    transform: scale(1.5);
-    accent-color: black;
-}
-.form__group-gender {
-    display: flex;
-    justify-content: space-between;
-}
-.postcode__icon {
-    margin-right: 10px;
-}
-
-.form__input--textarea textarea {
-    height: 200px;
-    resize: none;
+.form__error {
+    height: 20px;
+    color: #ff0000;
+    text-align: left;
 }
 
 .form__input--text-name input {
@@ -115,8 +96,39 @@
     margin-right: 5%;
 }
 
+.gender {
+    padding: 10px;
+    transform: scale(1.5);
+    accent-color: black;
+}
+.form__group-gender {
+    display: flex;
+    justify-content: space-between;
+}
+.postcode__icon {
+    margin-right: auto;
+    text-align: center;
+}
+
+.form__input--text-address {
+    display: flex;
+}
+.form__input--text-address input {
+    padding: 10px;
+    width: 575px;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    appearance: none;
+}
+
 .form__group-content {
     width: 100%;
+}
+
+.form__input--textarea textarea {
+    height: 200px;
+    resize: none;
 }
 
 .form__button {

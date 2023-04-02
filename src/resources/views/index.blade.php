@@ -21,8 +21,9 @@
         @csrf
         <div class="form__group">
             <div class="form__group-title">
-                <span class="form__label--item">お名前</span>
-                <span class="form__label--required">※</span>
+                <span class="form__label--item">お名前
+                    <span class="red">※</span>
+                </span>
             </div>
             <div class="form__group-content-name">
                 <div class="form__group-last-name">
@@ -56,8 +57,9 @@
         </div>
         <div class="form__group">
             <div class="form__group-title">
-                <span class="form__label--item">性別</span>
-                <span class="form__label--required">※</span>
+                <span class="form__label--item">性別
+                    <span class="red">※</span>
+                </span>
             </div>
             <div class="form__group-content">
                 <input type="radio" class = "gender" name="gender" id="male" value='1' {{ old('like','male') == 'male' ? 'checked' : '' }}>
@@ -72,8 +74,9 @@
 
 <div class="form__group">
 <div class="form__group-title">
-<span class="form__label--item">メールアドレス</span>
-<span class="form__label--required">※</span>
+<span class="form__label--item">メールアドレス
+    <span class="red">※</span>
+</span>
 </div>
 <div class="form__group-content">
 <div class="form__input--text">
@@ -92,13 +95,15 @@
 </div>
 <div  class="form__group">
             <div class="form__group-title">
-                <span class="form__label--item">郵便番号</span>
-                <span class="form__label--required">※</span>
+                <span class="form__label--item">郵便番号
+                        <span class="red">※</span>
+                </span>
+
             </div>
             <div class="form__group-content">
-                <div class="form__input--text">
+                <div class="form__input--text-address">
                     <!-- ▼郵便番号入力フィールド(7桁) -->
-                    <span class="postcode__icon">〒</span><input type="text" name="postcode" size="10" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,'','address','address');">
+                    <p class="postcode__icon">〒</p><input type="text" name="postcode" size="10" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,'','address','address');">
                 </div>
                 <div class="form__label--item-sample">
                     <span>例) 123-4567</span>
@@ -113,8 +118,9 @@
         </div>
         <div class="form__group">
             <div class="form__group-title">
-                <span class="form__label--item">住所</span>
-                <span class="form__label--required">※</span>
+                <span class="form__label--item">住所
+                        <span class="red">※</span>
+                </span>
             </div>
             <div class="form__group-content">
                 <div class="form__input--text">
@@ -134,7 +140,6 @@
         <div class="form__group">
             <div class="form__group-title">
                 <span class="form__label--item">建物名</span>
-                <span class="form__label--required">※</span>
             </div>
             <div class="form__group-content">
                 <div class="form__input--text">
@@ -153,8 +158,9 @@
         </div>
 <div class="form__group">
     <div class="form__group-title">
-        <span class="form__label--item">ご意見</span>
-        <span class="form__label--required">※</span>
+        <span class="form__label--item">ご意見
+                <span class="red">※</span>
+        </span>
     </div>
     <div class="form__group-content">
         <div class="form__input--textarea">
