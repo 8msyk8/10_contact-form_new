@@ -42,9 +42,8 @@ class ContactController extends Controller
 
     public function search(Request $request)
     {
-        $fullnames = Contact::FullNameSearch($request->fullname)->get();
-        $contacts = Contact::Paginate(10);
-        return view('admin', compact('fullnames', 'contacts'));
+        $contacts = Contact::FullNameSearch($request->fullname)->paginate(10);
+        return view('admin', compact('contacts'));
 
     }
 

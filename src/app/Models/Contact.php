@@ -22,6 +22,7 @@ class Contact extends Model
     {
         if (!empty($fullname)) {
             $query->where('fullname', 'like', '%' . $fullname . '%');
+            ;
         }
     }
 }
