@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\ContactRequest;
 use App\Models\Contact;
 
+
 class ContactController extends Controller
 {
     public function index()
@@ -42,7 +43,7 @@ class ContactController extends Controller
 
     public function search(Request $request)
     {
-        $contacts = Contact::FullNameSearch($request->fullname)->paginate(10);
+        $contacts = Contact::FullNameSearch($request->fullname)->EmailSearch($request->email)->GenderSearch($request->gender)->DateSearch($request->start_date, 'end_date')->paginate(10);
         return view('admin', compact('contacts'));
 
     }

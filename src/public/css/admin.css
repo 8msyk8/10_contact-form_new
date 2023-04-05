@@ -46,6 +46,7 @@ svg.w-5.h-5 {
 }
 
 .form__label--item {
+    text-align: center;
     margin-left: 5px;
     padding: 4px 6px;
     border-radius: 3px;
@@ -53,21 +54,33 @@ svg.w-5.h-5 {
 }
 .pagination {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
 }
+
 .current__page {
-    color: white;
-    background-color: #000;
-    border: solid 2px #000;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    background: green;
+    border-radius: 3px;
+    border: #000;
     text-decoration: none;
 }
 
 .next__page {
-    color: black;
-    background-color: white;
-    border: solid 2px black;
     text-decoration: none;
+    border-color: #000;
+}
+.page__result {
+    text-decoration: none;
+    border-color: #000;
+}
+.pagenation__group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pagenation__info {
+    margin: auto 0;
 }
 
 .admin_table {
