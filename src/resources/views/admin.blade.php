@@ -50,8 +50,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form__group-title">
-                                <span class="form__label--item">性別</span>
+                            <div class="form__group-title__gender">
+                                <span class="form__label--item__gender">性別</span>
                             </div>
                             <div class="form__group-content">
                                 <input type="radio" class="gender" name="gender" id="all" value='0' {{
@@ -73,17 +73,13 @@
                                         <input class="search-form__item-input" type="date" name="start_date"
                                             value="{{ old('start_date') }}">
                                     </div>
-                                    @php
-                                    $date = new DateTime();
-                                    echo $date->format('Y-m-d H:i:s');
-                                    @endphp
                                 </div>
                             </div>
                             <span>～</span>
                             <div class="form__group-content">
                                 <div class="form__group-last">
                                     <div class="form__input--text">
-                                        <input class="search-form__item-input" type="input" name="end_date"
+                                        <input class="search-form__item-input" type="date" name="end_date"
                                             value="{{ old('end_date') }}">
                                     </div>
                                 </div>

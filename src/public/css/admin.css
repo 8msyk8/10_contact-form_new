@@ -35,6 +35,20 @@ svg.w-5.h-5 {
     justify-content: flex-start;
     margin-bottom: 15px;
 }
+.form__group-title {
+    text-align: left;
+    width: 150px;
+    margin: auto 0;
+}
+.form__group-title__gender {
+    margin: auto 0;
+    padding-left: 10px;
+}
+
+.form__group-content {
+    margin: auto 0;
+    padding-left: 50px;
+}
 
 .form__input--text input {
     padding: 10px;
@@ -52,6 +66,15 @@ svg.w-5.h-5 {
     border-radius: 3px;
     font-weight: bold;
 }
+
+.form__label--item__gender {
+    padding-left: 50px;
+    text-align: center;
+    margin-left: 5px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
 .pagination {
     width: 100%;
 }
@@ -60,7 +83,7 @@ svg.w-5.h-5 {
     position: relative;
     display: inline-flex;
     align-items: center;
-    background: green;
+    background: red;
     border-radius: 3px;
     border: #000;
     text-decoration: none;

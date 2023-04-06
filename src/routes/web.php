@@ -20,6 +20,7 @@ Route::post('/contacts/edit', [ContactController::class, 'edit']);
 Route::post('/contacts/store', [ContactController::class, 'store']);
 
 Auth::routes();
+
 Route::get('/admin', [App\Http\Controllers\HomeController::class, 'admin'])->name('admin');
 Route::delete('/contacts/delete', [ContactController::class, 'destroy']);
 Route::get('/contacts/search', [ContactController::class, 'search']);
