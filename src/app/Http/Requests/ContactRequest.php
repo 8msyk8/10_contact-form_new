@@ -46,6 +46,7 @@ class ContactRequest extends FormRequest
             'email.string' => 'メールアドレスを文字列で入力してください',
             'email.email' => '有効なメールアドレス形式を入力してください',
             'email.max' => 'メールアドレスを255文字以下で入力してください',
+            'postcode.required' => '郵便番号を入力してください',
             'address.required' => '住所を入力してください',
             'address.max' => '住所を255文字以下で入力してください',
             'building_name.required' => '建物名を入力してください',

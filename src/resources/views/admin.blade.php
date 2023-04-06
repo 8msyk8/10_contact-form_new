@@ -67,7 +67,7 @@
                             <div class="form__group-title">
                                 <span class="form__label--item">登録日</span>
                             </div>
-                            <div class="form__group-content">
+                            <div class="form__group-content-start_date">
                                 <div class="form__group-last">
                                     <div class="form__input--text">
                                         <input class="search-form__item-input" type="date" name="start_date"
@@ -75,8 +75,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <span>～</span>
-                            <div class="form__group-content">
+                            <span class="date__between">～</span>
+                            <div class="form__group-content-end_date">
                                 <div class="form__group-last">
                                     <div class="form__input--text">
                                         <input class="search-form__item-input" type="date" name="end_date"
