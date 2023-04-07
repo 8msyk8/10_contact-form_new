@@ -6,7 +6,6 @@
     <meta name="viewprt" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/admin.css') }}" />
-
 </head>
 
 <body>
@@ -15,7 +14,6 @@
         <input type="submit" value="ログアウト">
     </form>
     <main>
-
         <div class="container">
             <div class="admin__heading">
                 <h2>管理システム</h2>
@@ -24,7 +22,6 @@
                 <div class="col-md-8">
                     <div class="card">
                         <div class="card-header">{{ __('Dashboard') }}</div>
-
                         <div class="card-body">
                             @if (session('status'))
                             <div class="alert alert-success" role="alert">
@@ -37,7 +34,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="search-form__container">
                 <form class="search-form" action="/contacts/search" method="get">
                     @csrf
@@ -103,9 +99,7 @@
                     <input class="search-form_reset" type="submit" value="リセット">
                 </form>
             </div>
-
             <div class="pagination">{{ $contacts->links() }}</div>
-
             <table class="admin_table">
                 <tr>
                     <th>ID</th>

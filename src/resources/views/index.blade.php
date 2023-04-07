@@ -12,8 +12,7 @@
 </head>
 
 <body>
-
-    <main>
+    <main class="main">
         <div class="contact-form__content">
             <div class="contact-form__heading">
                 <h2>お問い合わせ</h2>
@@ -23,7 +22,7 @@
                 <div class="form__group">
                     <div class="form__group-title">
                         <span class="form__label--item">お名前
-                            <span class="red">※</span>
+                            <span class="required">※</span>
                         </span>
                     </div>
                     <div class="form__group-content-name">
@@ -59,7 +58,7 @@
                 <div class="form__group">
                     <div class="form__group-title">
                         <span class="form__label--item">性別
-                            <span class="red">※</span>
+                            <span class="required">※</span>
                         </span>
                     </div>
                     <div class="form__group-content__gender">
@@ -73,11 +72,10 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="form__group">
                     <div class="form__group-title">
                         <span class="form__label--item">メールアドレス
-                            <span class="red">※</span>
+                            <span class="required">※</span>
                         </span>
                     </div>
                     <div class="form__group-content">
@@ -98,17 +96,17 @@
                 <div class="form__group">
                     <div class="form__group-title">
                         <span class="form__label--item">郵便番号
-                            <span class="red">※</span>
+                            <span class="required">※</span>
                         </span>
 
                     </div>
                     <div class="form__group-content">
-                        <div class="form__input--text-address">
+                        <div class="form__input--text-postcode">
                             <!-- ▼郵便番号入力フィールド(7桁) -->
                             <p class="postcode__icon">〒</p><input type="text" name="postcode" size="10" maxlength="8"
                                 onKeyUp="AjaxZip3.zip2addr(this,'','address','address');">
                         </div>
-                        <div class="form__label--item-sample-address">
+                        <div class="form__label--item-sample-postcode">
                             <span>例) 123-4567</span>
                         </div>
                         <div class="form__error">
@@ -122,7 +120,7 @@
                 <div class="form__group">
                     <div class="form__group-title">
                         <span class="form__label--item">住所
-                            <span class="red">※</span>
+                            <span class="required">※</span>
                         </span>
                     </div>
                     <div class="form__group-content">
@@ -162,7 +160,7 @@
                 <div class="form__group">
                     <div class="form__group-title">
                         <span class="form__label--item">ご意見
-                            <span class="red">※</span>
+                            <span class="required">※</span>
                         </span>
                     </div>
                     <div class="form__group-content">
