@@ -6,33 +6,37 @@
     <meta name="viewprt" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/admin.css') }}" />
+
 </head>
 
 <body>
-
+    <form class="search-form" action="/logout" method="post">
+        @csrf
+        <input type="submit" value="ログアウト">
+    </form>
     <main>
 
         <div class="container">
             <div class="admin__heading">
                 <h2>管理システム</h2>
             </div>
-            <!-- <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">{{ __('Dashboard') }}</div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
+                        <div class="card-body">
+                            @if (session('status'))
+                            <div class="alert alert-success" role="alert">
+                                {{ session('status') }}
+                            </div>
+                            @endif
+
+                            {{ __('You are logged in!') }}
                         </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
+                    </div>
                 </div>
             </div>
-        </div>
-    </div> -->
 
             <div class="search-form__container">
                 <form class="search-form" action="/contacts/search" method="get">
@@ -43,11 +47,9 @@
                                 <span class="form__label--item">お名前</span>
                             </div>
                             <div class="form__group-content">
-                                <div class="form__group-last">
-                                    <div class="form__input--text">
-                                        <input class="search-form__item-input" type="text" name="fullname"
-                                            value="{{ old('fullname') }}">
-                                    </div>
+                                <div class="form__input--text">
+                                    <input class="search-form__item-input" type="text" name="fullname"
+                                        value="{{ old('fullname') }}">
                                 </div>
                             </div>
                             <div class="form__group-title__gender">
@@ -68,20 +70,16 @@
                                 <span class="form__label--item">登録日</span>
                             </div>
                             <div class="form__group-content-start_date">
-                                <div class="form__group-last">
-                                    <div class="form__input--text">
-                                        <input class="search-form__item-input" type="date" name="start_date"
-                                            value="{{ old('start_date') }}">
-                                    </div>
+                                <div class="form__input--text">
+                                    <input class="search-form__item-input" type="date" name="start_date"
+                                        value="{{ old('start_date') }}">
                                 </div>
                             </div>
                             <span class="date__between">～</span>
                             <div class="form__group-content-end_date">
-                                <div class="form__group-last">
-                                    <div class="form__input--text">
-                                        <input class="search-form__item-input" type="date" name="end_date"
-                                            value="{{ old('end_date') }}">
-                                    </div>
+                                <div class="form__input--text">
+                                    <input class="search-form__item-input" type="date" name="end_date"
+                                        value="{{ old('end_date') }}">
                                 </div>
                             </div>
                         </div>
@@ -90,11 +88,9 @@
                                 <span class="form__label--item">メールアドレス</span>
                             </div>
                             <div class="form__group-content">
-                                <div class="form__group-last">
-                                    <div class="form__input--text">
-                                        <input class="search-form__item-input" type="text" name="email"
-                                            value="{{ old('email') }}">
-                                    </div>
+                                <div class="form__input--text">
+                                    <input class="search-form__item-input" type="text" name="email"
+                                        value="{{ old('email') }}">
                                 </div>
                             </div>
                         </div>

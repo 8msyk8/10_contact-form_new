@@ -27,4 +27,16 @@ class HomeController extends Controller
         $contacts = Contact::Paginate(10);
         return view('admin', ['contacts' => $contacts]);
     }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return ('/');
+    }
+
 }

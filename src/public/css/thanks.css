@@ -3,16 +3,16 @@
 }
 
 .header__inner {
+    max-width: 1230px;
     margin: 0 auto;
     padding: 20px 15px;
-    max-width: 1230px;
 }
 
 .header__logo {
     color: #fff;
-    text-decoration: none;
     font-weight: bold;
     font-size: 24px;
+    text-decoration: none;
 }
 
 .main {
@@ -22,27 +22,27 @@
 }
 
 .thanks__container {
+    position: relative;
     width: 100%;
     height: 100%;
-    position: relative;
 }
 
 .thanks__content {
+    position: absolute;
     width: 50%;
     height: 200px;
+    margin: auto;
     text-align: center;
-    position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    margin: auto;
 }
 
 .top__button-submit {
-    padding: 10px;
     width: 20%;
     height: 50px;
+    padding: 10px;
     border: none;
     border-radius: 3px;
     background: #000;
