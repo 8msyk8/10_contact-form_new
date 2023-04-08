@@ -108,12 +108,12 @@
 }
 .gender__check--male {
     transform: scale(1.5);
-    accent-color: black;
+    accent-color: #000;
 }
 .gender__check--female {
     margin-left: 20px;
     transform: scale(1.5);
-    accent-color: black;
+    accent-color: #000;
 }
 
 .postcode__icon {

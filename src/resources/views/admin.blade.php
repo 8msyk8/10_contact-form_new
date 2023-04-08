@@ -18,22 +18,6 @@
             <div class="admin__heading">
                 <h2>管理システム</h2>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="card">
-                        <div class="card-header">{{ __('Dashboard') }}</div>
-                        <div class="card-body">
-                            @if (session('status'))
-                            <div class="alert alert-success" role="alert">
-                                {{ session('status') }}
-                            </div>
-                            @endif
-
-                            {{ __('You are logged in!') }}
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="search-form__container">
                 <form class="search-form" action="/contacts/search" method="get">
                     @csrf

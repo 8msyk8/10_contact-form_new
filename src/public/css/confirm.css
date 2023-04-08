@@ -71,7 +71,7 @@
 button.back--btn {
     border: none;
     background: none;
-    color: black;
+    color: #000;
     text-decoration: underline;
     cursor: pointer;
 }

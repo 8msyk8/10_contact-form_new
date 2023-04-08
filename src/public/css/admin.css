@@ -95,7 +95,6 @@ svg.w-5.h-5 {
     position: relative;
     display: inline-flex;
     align-items: center;
-    background: red;
     border-radius: 3px;
     border: #000;
     text-decoration: none;
@@ -136,7 +135,7 @@ svg.w-5.h-5 {
     cursor: pointer;
     border: none;
     background: none;
-    color: black;
+    color: #000;
     text-decoration: underline;
 }
 
